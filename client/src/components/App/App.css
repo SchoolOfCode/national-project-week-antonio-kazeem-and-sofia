@@ -1,0 +1,9 @@
+.App {
+  font-family: 'Open Sans', sans-serif;
+  color: #0b2138;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
