@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
-import cors from "cors"
+import Axios from "axios";
+// import cors from "cors"
 
 function Register() {
   const [fname, setFname] = useState("");
@@ -12,23 +12,20 @@ function Register() {
   const [location, setLocation] = useState("");
   const [interest, setInterest] = useState("");
 
-
-  const register = (e) => {
-   e.preventDefault()
-    axios
-      .post("http://localhost3001/users", {
-        fname: fname,
-        lname: lname,
-        email: email,
-        githubuser: ghub,
-        password: password,
-        location: location,
-        interest: interest
-      })
-      .then((res) => {console.log(res)});
-
+  const register = () => {
+    Axios.post("http://localhost:3001/users", {
+      fname: fname,
+      lname: lname,
+      email: email,
+      githubuser: ghub,
+      password: password,
+      location: location,
+      intrests: interest
+    }).then((res) => {
+      console.log(res);
+    });
   };
-console.log(fname,email)
+
   return (
     <form>
       <label>First Name</label>
