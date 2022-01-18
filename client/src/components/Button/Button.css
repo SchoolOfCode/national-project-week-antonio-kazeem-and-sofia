@@ -1,0 +1,29 @@
+.button {
+  margin: 0 0.5rem 0 0.5rem;
+  border: none;
+  padding: 0.7rem;
+  color: white;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.update {
+  background-color: #9b59b6;
+}
+
+.delete {
+  background-color: #ff4163;
+}
+
+.update:hover {
+  background-color: #a86bc0;
+}
+
+.delete:hover {
+  background-color: #fd5f7c;
+}
