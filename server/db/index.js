@@ -1,12 +1,12 @@
 import pg from 'pg';
+import { db } from '../config';
 
 const pool = new pg.Pool({
-    user: 'tikkofuzpkjumd',
-    host: 'ec2-54-216-90-155.eu-west-1.compute.amazonaws.com',
-    database: 'decu74t7djvo9g',
-    password:
-        '499e180f0db3ae559c6f8e557c72c42a9d737a8532a6a9584561039998913eb2',
-    port: 5432,
+    user: db.user,
+    host: db.host,
+    database: db.database,
+    password: db.password,
+    port: db.port,
     ssl: { rejectUnauthorized: false },
 });
 
