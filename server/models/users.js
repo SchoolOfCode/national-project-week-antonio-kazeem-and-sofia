@@ -1,4 +1,4 @@
-import query from '../db';
+import query from '../db/index.js';
 
 export const createUsers = async (body) => {
     const { fname, lname, email, githubUser, password, location, interests } =
