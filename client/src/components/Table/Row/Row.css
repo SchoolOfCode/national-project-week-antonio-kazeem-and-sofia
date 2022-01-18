@@ -1,0 +1,16 @@
+.table-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
