@@ -2,18 +2,35 @@ import React from 'react';
 import Button from '../../Button';
 import './Row.css';
 
-const Row = () => {
+const Row = ({ name, lastname, email, location, githubuser, interest }) => {
+  function generateAvatar(name, lastname) {
+    if (lastname === null || name === null) {
+      return 'NA';
+    }
+
+    return `${name[0].toUpperCase()}${lastname[0].toUpperCase()}`;
+  }
+
   return (
     <div className="table-row">
       <div className="row">
-        <div className="w-3  avatar">AS</div>
+        <div className="w-3  avatar">{generateAvatar(name, lastname)}</div>
         <div className="w-3">
-          <img src="github-icon.svg" alt="Github" />
+          <a
+            href={`https://www.github.com/${githubuser}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="github-icon.svg" alt="Github" />
+          </a>
         </div>
-        <div className="w-15 bold">Antonio Sevillano</div>
-        <div className="w-20">antonio@antonio.com</div>
-        <div className="w-20">Newcastle upon tyne</div>
-        <div className="w-20">Astronomy</div>
+        <div className="w-15 bold">
+          {`${name}
+          ${lastname}`}
+        </div>
+        <div className="w-20">{email}</div>
+        <div className="w-20">{location}</div>
+        <div className="w-20">{interest}</div>
 
         <div className="button-container w-19">
           <Button styles="update" text="Update" />
