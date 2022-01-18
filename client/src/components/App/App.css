@@ -1,9 +1,6 @@
 .App {
-  font-family: 'Open Sans', sans-serif;
-  color: #0b2138;
+  min-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
 }
