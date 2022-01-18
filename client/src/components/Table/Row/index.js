@@ -16,7 +16,13 @@ const Row = ({ name, lastname, email, location, githubuser, interest }) => {
       <div className="row">
         <div className="w-3  avatar">{generateAvatar(name, lastname)}</div>
         <div className="w-3">
-          <img src="github-icon.svg" alt="Github" />
+          <a
+            href={`https://www.github.com/${githubuser}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="github-icon.svg" alt="Github" />
+          </a>
         </div>
         <div className="w-15 bold">
           {`${name}
