@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import Header from './Header';
-import Row from './Row';
-import './table.css';
+import Header from "./Header";
+import Row from "./Row";
+import "./table.css";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
@@ -17,19 +17,21 @@ const Contacts = () => {
   }, []);
 
   return (
-    <div className="users-table-container">
-      <Header />
-      {userData.map((user) => (
-        <Row
-          key={user.userid}
-          name={user.f_name}
-          lastname={user.l_name}
-          email={user.email}
-          location={user.location}
-          githubuser={user.githubuser}
-          interest={user.intrests}
-        />
-      ))}
+    <div>
+      <div className="users-table-container">
+        <Header />
+        {userData.map((user) => (
+          <Row
+            key={user.userid}
+            name={user.f_name}
+            lastname={user.l_name}
+            email={user.email}
+            location={user.location}
+            githubuser={user.githubuser}
+            interest={user.intrests}
+          />
+        ))}
+      </div>
     </div>
   );
 };
