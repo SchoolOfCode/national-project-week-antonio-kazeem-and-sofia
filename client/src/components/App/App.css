@@ -1,6 +1,22 @@
-.App {
+/* .App {
   min-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+.App {
+  display: flex;
+}
+
+.App > :first-child {
+  position: fixed;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 220px;
 }

@@ -47,6 +47,13 @@ const Contacts = () => {
   });
 
   return (
+
+    <>
+  
+    
+  
+
+    <h1 className="section-title">Bootcamper directory</h1>
     <div className="users-table-container">
       <form className="search">
       <label>Location</label>
@@ -86,6 +93,7 @@ const Contacts = () => {
           />
         ))}
       </div>
+    </>
       
       {userData.map((user) => (
         <Row
