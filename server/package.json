@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "main": "bin/www.js",
   "scripts": {
     "start": "nodemon -r dotenv/config.js  ./bin/www.js",
     "createUser": "node -r dotenv/config.js ./db/scripts/createUserTable.js",
