@@ -19,19 +19,19 @@ const Contacts = () => {
     getData();
   }, []);
 
-
+  console.log(userData);
 
   async function fetchData(e) {
-    e.preventDefault()
+    e.preventDefault();
     const response = await fetch(
       `http://localhost:3001/users?location=${input}`
     );
     const data = await response.json();
     setFetchedData(data.payload);
   }
-  
+
   async function fetchIntrest(e) {
-    e.preventDefault()
+    e.preventDefault();
     const response = await fetch(
       `http://localhost:3001/users?intrest=${inputIntrest}`
     );
@@ -39,49 +39,55 @@ const Contacts = () => {
     setFetchedData(dataIntrest.payload);
   }
 
-
-  
-  useEffect(() => {
-    fetchData();
-    fetchIntrest()
-  });
+  // useEffect(() => {
+  //   fetchData();
+  //   fetchIntrest();
+  // });
 
   return (
-
     <>
-  
-    
-  
+      <h1 className="section-title">Bootcamper directory</h1>
+      <div className="users-table-container">
+        <form className="search">
+          <label>Location</label>
+          <br></br>
+          <div>
+            {" "}
+            <input
+              onClick={(e) => {
+                setInput(e.target.value);
+              }}
+            />
+          </div>
+          <button onClick={fetchData}>Search</button>
+          <label>Interest</label>
+          <br></br>
+          <div>
+            {" "}
+            <input
+              onClick={(e) => {
+                setInputIntrest(e.target.value);
+              }}
+            />
+          </div>
+          <button onClick={fetchIntrest}>Search</button>
+        </form>
+        <div>
+          <Header />
+          {data.map((user) => (
+            <Row
+              key={user.userid}
+              name={user.f_name}
+              lastname={user.l_name}
+              email={user.email}
+              location={user.location}
+              githubuser={user.githubuser}
+              interest={user.intrests}
+            />
+          ))}
+        </div>
 
-    <h1 className="section-title">Bootcamper directory</h1>
-    <div className="users-table-container">
-      <form className="search">
-      <label>Location</label>
-      <br></br>
-        <div>
-          {" "}
-          <input
-            onClick={(e) => {
-              setInput(e.target.value);
-            }}
-          />
-        </div>
-        <button onClick={fetchData}>Search</button>
-      <label>Interest</label>
-      <br></br>
-        <div>
-          {" "}
-          <input
-            onClick={(e) => {
-              setInputIntrest(e.target.value);
-            }}
-          />
-        </div>
-        <button onClick={fetchIntrest}>Search</button>
-      </form>
-      <div>
-        <Header />
-        {data.map((user) => (
+        {userData.map((user) => (
           <Row
             key={user.userid}
             name={user.f_name}
@@ -94,19 +100,6 @@ const Contacts = () => {
         ))}
       </div>
     </>
-      
-      {userData.map((user) => (
-        <Row
-          key={user.userid}
-          name={user.f_name}
-          lastname={user.l_name}
-          email={user.email}
-          location={user.location}
-          githubuser={user.githubuser}
-          interest={user.intrests}
-        />
-      ))}
-    </div>
   );
 };
 
