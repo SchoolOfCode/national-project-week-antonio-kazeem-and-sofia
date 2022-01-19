@@ -59,6 +59,7 @@ const Contacts = () => {
             }}
           />
         </div>
+        <button onClick={fetchData}>Search</button>
       <label>Interest</label>
       <br></br>
         <div>
