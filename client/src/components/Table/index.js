@@ -4,7 +4,8 @@ import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
 
-const API_URL = process.env.REACT_APP_API_
+// const API_URL = process.env.REACT_APP_API_
+const API_URL = "http://localhost:3001";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
