@@ -6,9 +6,9 @@ import "./table.css";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
-  const [input, setInput] = useState("");
-  const [inputIntrest, setInputIntrest] = useState("");
-  const [data, setFetchedData] = useState([]);
+  const [inputLocationValue, setInputLocationValue] = useState();
+  const [inputInterestValue, setInputInterestValue] = useState();
+  const [filter, setFilter] = useState();
 
   useEffect(() => {
     async function getData() {
@@ -19,85 +19,69 @@ const Contacts = () => {
     getData();
   }, []);
 
-  console.log(userData);
-
-  async function fetchData(e) {
-    e.preventDefault();
-    const response = await fetch(
-      `http://localhost:3001/users?location=${input}`
-    );
-    const data = await response.json();
-    setFetchedData(data.payload);
+  function filterByLocation(event) {
+    event.preventDefault();
+    setFilter(userData.filter((data) => data.location === inputLocationValue));
   }
 
-  async function fetchIntrest(e) {
-    e.preventDefault();
-    const response = await fetch(
-      `http://localhost:3001/users?intrest=${inputIntrest}`
-    );
-    const dataIntrest = await response.json();
-    setFetchedData(dataIntrest.payload);
+  function filterByInterest(event) {
+    event.preventDefault();
+    setFilter(userData.filter((data) => data.intrests === inputInterestValue));
   }
-
-  // useEffect(() => {
-  //   fetchData();
-  //   fetchIntrest();
-  // });
 
   return (
     <>
       <h1 className="section-title">Bootcamper directory</h1>
+      <div className="user-search-form">
+        <div className="search">
+          <label className="search-form-input-label">
+            <p>Location</p>
+            <input
+              onChange={(e) => {
+                setInputLocationValue(e.target.value);
+              }}
+            />
+            <button onClick={filterByLocation}>Search</button>
+          </label>
+
+          <label className="search-form-input-label">
+            <p> Interest</p>
+            <input
+              onChange={(e) => {
+                setInputInterestValue(e.target.value);
+              }}
+            />
+            <button onClick={filterByInterest}>Search</button>
+          </label>
+        </div>
+      </div>
       <div className="users-table-container">
-        <form className="search">
-          <label>Location</label>
-          <br></br>
-          <div>
-            {" "}
-            <input
-              onClick={(e) => {
-                setInput(e.target.value);
-              }}
-            />
-          </div>
-          <button onClick={fetchData}>Search</button>
-          <label>Interest</label>
-          <br></br>
-          <div>
-            {" "}
-            <input
-              onClick={(e) => {
-                setInputIntrest(e.target.value);
-              }}
-            />
-          </div>
-          <button onClick={fetchIntrest}>Search</button>
-        </form>
         <div>
           <Header />
-          {data.map((user) => (
-            <Row
-              key={user.userid}
-              name={user.f_name}
-              lastname={user.l_name}
-              email={user.email}
-              location={user.location}
-              githubuser={user.githubuser}
-              interest={user.intrests}
-            />
-          ))}
         </div>
-
-        {userData.map((user) => (
-          <Row
-            key={user.userid}
-            name={user.f_name}
-            lastname={user.l_name}
-            email={user.email}
-            location={user.location}
-            githubuser={user.githubuser}
-            interest={user.intrests}
-          />
-        ))}
+        {!filter || filter.length === 0
+          ? userData.map((user) => (
+              <Row
+                key={user.userid}
+                name={user.f_name}
+                lastname={user.l_name}
+                email={user.email}
+                location={user.location}
+                githubuser={user.githubuser}
+                interest={user.intrests}
+              />
+            ))
+          : filter.map((user) => (
+              <Row
+                key={user.userid}
+                name={user.f_name}
+                lastname={user.l_name}
+                email={user.email}
+                location={user.location}
+                githubuser={user.githubuser}
+                interest={user.intrests}
+              />
+            ))}
       </div>
     </>
   );

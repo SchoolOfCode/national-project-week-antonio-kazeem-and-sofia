@@ -14,7 +14,7 @@ const Row = ({ name, lastname, email, location, githubuser, interest }) => {
   return (
     <div className="table-row">
       <div className="row">
-        <div className="w-3  avatar">{generateAvatar(name, lastname)}</div>
+        <div className="avatar">{generateAvatar(name, lastname)}</div>
         <div className="w-3">
           <a
             href={`https://www.github.com/${githubuser}`}
