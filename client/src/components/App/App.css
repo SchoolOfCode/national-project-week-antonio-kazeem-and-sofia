@@ -14,8 +14,9 @@
   height: 100%;
 }
 
-.eo {
+.main {
   width: 100%;
   display: flex;
-  margin-left: 185px;
+  flex-direction: column;
+  margin-left: 220px;
 }

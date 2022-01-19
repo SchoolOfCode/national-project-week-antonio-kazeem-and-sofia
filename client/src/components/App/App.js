@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="eo">
+      <div className="main">
         <Routes>
           <Route path="/" element={<Table />} />
           <Route path="/Login" element={<Login />} />

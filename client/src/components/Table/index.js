@@ -18,6 +18,7 @@ const Contacts = () => {
 
   return (
     <>
+      <h1 className="section-title">Bootcamper directory</h1>
       <div className="users-table-container">
         <Header />
         {userData.map((user) => (
