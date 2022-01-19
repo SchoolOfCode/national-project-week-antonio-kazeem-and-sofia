@@ -38,7 +38,7 @@
 .menu {
   list-style: none;
   margin-top: 2rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .menu li {
@@ -56,4 +56,5 @@
   border-left: 4px solid #9b59b6;
   padding: 10px;
   background-color: #fbefff;
+  font-weight: 800;
 }

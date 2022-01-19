@@ -47,31 +47,30 @@ const Contacts = () => {
   return (
     <>
       <h1 className="section-title">Bootcamper directory</h1>
-      <div className="users-table-container">
+      <div className="user-search-form">
         <form className="search">
-          <label>Location</label>
-          <br></br>
-          <div>
-            {" "}
+          <label className="search-form-input-label">
+            <p>Location</p>
             <input
               onClick={(e) => {
                 setInput(e.target.value);
               }}
             />
-          </div>
-          <button onClick={fetchData}>Search</button>
-          <label>Interest</label>
-          <br></br>
-          <div>
-            {" "}
+            <button onClick={fetchData}>Search</button>
+          </label>
+
+          <label className="search-form-input-label">
+            <p> Interest</p>
             <input
               onClick={(e) => {
                 setInputIntrest(e.target.value);
               }}
             />
-          </div>
-          <button onClick={fetchIntrest}>Search</button>
+            <button onClick={fetchIntrest}>Search</button>
+          </label>
         </form>
+      </div>
+      <div className="users-table-container">
         <div>
           <Header />
           {data.map((user) => (

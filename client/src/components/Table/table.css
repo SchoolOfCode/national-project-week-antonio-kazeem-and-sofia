@@ -80,7 +80,6 @@
   margin-right: 1rem;
 }
 
-
 .section-title {
   width: 94%;
   margin-top: 1.5rem;
@@ -91,7 +90,38 @@
   font-size: 1.5rem;
 }
 
-.search{
+.user-search-form {
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search {
   display: flex;
 }
 
+.search-form-input-label {
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem 0 0;
+}
+
+.search-form-input-label p {
+  margin-right: 0.5rem;
+}
+
+.search-form-input-label input {
+  border: 1px solid #ccced1;
+  padding: 0.4rem;
+  width: 100%;
+  outline-color: #cd9fdf;
+  border-radius: 6px 0 0 6px;
+}
+
+.search-form-input-label button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 0.45rem;
+  border-radius: 0 6px 6px 0;
+}
