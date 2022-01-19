@@ -15,7 +15,7 @@ export const getUsers = async () => {
 };
 
 export const getLogin = async (body) => {
-    console.log(body)
+  console.log(body);
   const { email, password } = body;
 
   const response = await query(
@@ -24,3 +24,19 @@ export const getLogin = async (body) => {
   );
   return response.rows;
 };
+
+export async function getUsersByQuery(location, intrest) {
+  if (location !== undefined) {
+    const res = await query(
+      `SELECT * FROM users WHERE location ILIKE '%'||$1||'%'`,
+      [location]
+    );
+    return res.rows;
+  } else {
+    const res = await query(
+      `SELECT * FROM users WHERE intrests ILIKE '%'||$1||'%'`,
+      [intrest]
+    );
+    return res.rows;
+  }
+}
