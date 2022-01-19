@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../Button";
 import "./Row.css";
 
 const Row = ({ name, lastname, email, location, githubuser, interest }) => {
@@ -33,8 +32,8 @@ const Row = ({ name, lastname, email, location, githubuser, interest }) => {
         <div className="w-20">{interest}</div>
 
         <div className="button-container w-19">
-          <Button styles="update" text="Update" />
-          <Button styles="delete" text="Delete" />
+          {/* <Button styles="update" text="Update" />
+          <Button styles="delete" text="Delete" /> */}
         </div>
       </div>
     </div>
