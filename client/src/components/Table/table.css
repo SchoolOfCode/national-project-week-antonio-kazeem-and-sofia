@@ -65,17 +65,6 @@
   margin-bottom: 3rem;
 }
 
-.avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3498db;
-  color: white;
-  font-weight: 500;
-  border-radius: 50%;
-  height: 32px;
-}
-
 .m-right {
   margin-right: 1rem;
 }
