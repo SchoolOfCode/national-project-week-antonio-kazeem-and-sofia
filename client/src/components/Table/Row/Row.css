@@ -14,3 +14,16 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: white;
+  font-weight: 500;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+}
