@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '../../Button';
-import './Row.css';
+import React from "react";
+import Button from "../../Button";
+import "./Row.css";
 
 const Row = ({ name, lastname, email, location, githubuser, interest }) => {
   function generateAvatar(name, lastname) {
-    if (lastname === null || name === null) {
-      return 'NA';
+    if (lastname === null || name === null || name === "" || lastname === "") {
+      return "NA";
     }
 
     return `${name[0].toUpperCase()}${lastname[0].toUpperCase()}`;
