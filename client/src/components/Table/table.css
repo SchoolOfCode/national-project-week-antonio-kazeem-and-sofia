@@ -77,3 +77,7 @@
 .m-right {
   margin-right: 1rem;
 }
+
+.search{
+  display: flex;
+}
