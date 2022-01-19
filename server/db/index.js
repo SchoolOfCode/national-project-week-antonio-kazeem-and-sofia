@@ -2,11 +2,7 @@ import pg from 'pg';
 import { db } from '../config.js';
 
 const pool = new pg.Pool({
-    user: db.user,
-    host: db.host,
-    database: db.database,
-    password:db.password ,
-    port: 5432,
+connectionString: config.URL
     ssl: { rejectUnauthorized: false },
 });
 
