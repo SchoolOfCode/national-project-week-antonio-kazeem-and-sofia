@@ -3,11 +3,9 @@ import "./Row.css";
 
 const Row = ({ name, lastname, email, location, githubuser, interest }) => {
   function generateAvatar(name, lastname) {
-    if (lastname === null || name === null || name === "" || lastname === "") {
-      return "NA";
-    }
-
-    return `${name[0].toUpperCase()}${lastname[0].toUpperCase()}`;
+    return lastname === null || name === null || name === "" || lastname === ""
+      ? "NA"
+      : `${name[0].toUpperCase()}${lastname[0].toUpperCase()}`;
   }
 
   return (
