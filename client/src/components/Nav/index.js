@@ -3,7 +3,7 @@ import "./Nav.css";
 function Nav() {
   return (
     <aside className="sidebar">
-      <div className="logo">Bootcamper Dashboard</div>
+      <div className="logo">Bootcamp Tracker</div>
       <div className="avatar-sidebar">
         <img src="./avatar.svg" alt="" />
       </div>

@@ -7,17 +7,15 @@
 
 .App {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
 }
 
 .App > :first-child {
-  flex-basis: 200px;
-  flex-grow: 1;
+  position: fixed;
+  height: 100%;
 }
 
-.App > :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 50%;
+.eo {
+  width: 100%;
+  display: flex;
+  margin-left: 185px;
 }

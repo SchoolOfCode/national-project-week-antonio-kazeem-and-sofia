@@ -17,7 +17,7 @@ const Contacts = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="users-table-container">
         <Header />
         {userData.map((user) => (
@@ -32,7 +32,7 @@ const Contacts = () => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
