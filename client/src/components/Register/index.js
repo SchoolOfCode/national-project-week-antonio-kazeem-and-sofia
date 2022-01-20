@@ -13,7 +13,7 @@ function Register() {
   const [interest, setInterest] = useState("");
 
   const register = () => {
-    Axios.post("http://localhost:3001/users", {
+    Axios.post("https://caz1.herokuapp.com/users", {
       fname: fname,
       lname: lname,
       email: email,

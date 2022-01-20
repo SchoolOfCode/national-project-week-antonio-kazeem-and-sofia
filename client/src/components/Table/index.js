@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
+import ButtonJournal from "../ButtonJournal/Button";
 // import { API_URL } from "../../../config.js";
 
 const Contacts = () => {
@@ -27,6 +28,10 @@ const Contacts = () => {
     );
   }
 
+  function openModal() {
+    console.log("Working!");
+  }
+
   return (
     <>
       <h1 className="section-title">Bootcamper directory</h1>
@@ -38,6 +43,9 @@ const Contacts = () => {
               onChange={(e) => updateFilter(e)}
             />
           </label>
+          <Link className="link-register" to="/register">
+            <ButtonJournal text=" Add bootcamper" handleButton={openModal} />
+          </Link>
         </div>
       </div>
 
