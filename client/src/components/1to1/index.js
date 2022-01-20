@@ -1,17 +1,15 @@
 import React from "react";
 import "./1to1.css";
 import { useState } from "react";
+import Input from "../Input1to1";
 
 function OnetoOne() {
   const [input, setInput] = useState("");
   const [inputList, setInputList] = useState([]);
 
-  // console.log(input);
-
   function handleButton() {
-    setInputList([...inputList,{input}])
+    setInputList([...inputList, { input }]);
   }
-  // console.log(inputList);
 
   return (
     <div>
@@ -22,22 +20,8 @@ function OnetoOne() {
         <p>Your next meeting is on 23/11/2021 </p>
         <p>Meeting Zoom link: </p>
       </div>
-
-      <div className="input-field">
-        Things to work on before the next meeting
-        <input
-          className="input-thingstodo"
-          onChange={(e) => {
-            setInput(e.target.value);
-          }}
-        ></input>
-        <button onClick={handleButton}>Add</button>
-      </div>
-      <div className="table">
-      {inputList.map((item)=>{
-        console.log(item.input)
-        return <p>{item.imput}</p>
-      })}
+      <div>
+        <Input />
       </div>
     </div>
   );
