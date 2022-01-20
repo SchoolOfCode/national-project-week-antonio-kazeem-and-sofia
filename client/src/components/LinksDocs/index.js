@@ -9,52 +9,52 @@ const LinksDocs = () => {
         <h2 className="linkdocs-title">Helpful Links</h2>
         <section className="linkdocs-card-container">
           <section className="linkdocs-card">
-            <p className="my-1">link 1</p>
+            <p className="my-1">.filter()</p>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
               target="_blank"
               rel="noreferrer"
             >
               <p className="bg-dark p">
-                <strong>.filter() JavaScript</strong>
+                <strong>See here...</strong>
               </p>
             </a>
           </section>
 
           <section className="linkdocs-card">
-            <p className="my-1">link 2</p>
+            <p className="my-1">.map()</p>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
               target="_blank"
               rel="noreferrer"
             >
               <p className="bg-dark p">
-                <strong>.filter() JavaScript</strong>
+                <strong>See here...</strong>
               </p>
             </a>
           </section>
 
           <section className="linkdocs-card">
-            <p className="my-1">link 3</p>
+            <p className="my-1">.reduce()</p>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
               target="_blank"
               rel="noreferrer"
             >
               <p className="bg-dark p">
-                <strong>.filter() JavaScript</strong>
+                <strong>See here...</strong>
               </p>
             </a>
           </section>
           <section className="linkdocs-card">
-            <p className="my-1">link 4</p>
+            <p className="my-1">.slice()</p>
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
               target="_blank"
               rel="noreferrer"
             >
               <p className="bg-dark">
-                <strong>.filter() JavaScript</strong>
+                <strong>See here...</strong>
               </p>
             </a>
           </section>
