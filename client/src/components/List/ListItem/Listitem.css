@@ -1,0 +1,28 @@
+.task-item {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 0.5rem;
+}
+
+.close-tag {
+  margin-left: auto;
+  padding: 0 0 0 1rem;
+  color: red;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.High {
+  background-color: #ff4163;
+}
+
+.Medium {
+  background-color: #f39c12;
+}
+
+.Low {
+  background-color: #3498db;
+}

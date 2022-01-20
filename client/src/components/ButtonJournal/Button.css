@@ -1,0 +1,21 @@
+.add-to-list-button {
+  align-self: end;
+  background-color: #ff4163;
+}
+
+.add-to-list-button,
+.order-list-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 2.9rem;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  outline-color: #d4d4d4;
+  border-radius: 5px;
+}
