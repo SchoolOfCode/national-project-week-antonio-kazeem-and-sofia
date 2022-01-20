@@ -7,9 +7,7 @@
   "scripts": {
     "start": "node -r dotenv/config.js  ./bin/www.js",
     "createUser": "node -r dotenv/config.js ./db/scripts/createUserTable.js",
-    "createTodo": "node -r dotenv/config.js ./db/scripts/createTodo.js",
-    "populateUser": "node -r dotenv/config.js ./db/scripts/populateData.js",
-    "populateTodo": "node -r dotenv/config.js ./db/scripts/populatetodo.js"
+    "populateUser": "node -r dotenv/config.js ./db/scripts/populateData.js"
   },
   "engines": {
     "node": "16.13.1"
