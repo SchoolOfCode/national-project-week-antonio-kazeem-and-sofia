@@ -9,7 +9,7 @@ function OnetoOne() {
   console.log(input);
 
   function handleButton() {
-    setInputList([...inputList,input])
+    setInputList([...inputList,{input}])
   }
   console.log(inputList);
 
