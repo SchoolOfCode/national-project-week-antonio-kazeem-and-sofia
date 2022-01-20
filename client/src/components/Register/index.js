@@ -4,6 +4,10 @@ import { useState } from "react";
 import Axios from "axios";
 // import cors from "cors"
 
+//Styles
+import "./register.css";
+import Button from "../Button/Button";
+
 function Register() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -28,69 +32,71 @@ function Register() {
   };
 
   return (
-    <form>
-      <label>
-        First Name
-        <input
-          onChange={(e) => {
-            setFname(e.target.value);
-          }}
-        />
-      </label>
-      <label>
-        Last Name
-        <input
-          onChange={(e) => {
-            setLname(e.target.value);
-          }}
-        />
-      </label>
+    <div className="register-section-container">
+      <h1 className="register-title">Register a new bootcamper</h1>
+      <form className="register-form">
+        <label>
+          First Name
+          <input
+            onChange={(e) => {
+              setFname(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Last Name
+          <input
+            onChange={(e) => {
+              setLname(e.target.value);
+            }}
+          />
+        </label>
 
-      <label>
-        Email
-        <input
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-      </label>
-      <label>
-        Github Username
-        <input
-          onChange={(e) => {
-            setGhub(e.target.value);
-          }}
-        />
-      </label>
-      <label>
-        Password
-        <input
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-      </label>
-      <label>
-        Location
-        <input
-          onChange={(e) => {
-            setLocation(e.target.value);
-          }}
-        />
-      </label>
+        <label>
+          Email
+          <input
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Github Username
+          <input
+            onChange={(e) => {
+              setGhub(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Password
+          <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Location
+          <input
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
+          />
+        </label>
 
-      <label>
-        Interests
-        <br></br>
-        <input
-          onChange={(e) => {
-            setInterest(e.target.value);
-          }}
-        />
-      </label>
-
-      <button onClick={register}>Submit</button>
-    </form>
+        <label>
+          Interests
+          <br></br>
+          <input
+            onChange={(e) => {
+              setInterest(e.target.value);
+            }}
+          />
+        </label>
+        <Button handleButton={register} text="Add bootcamper " />
+      </form>
+    </div>
   );
 }
 

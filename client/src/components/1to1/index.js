@@ -38,25 +38,40 @@ const Journal = () => {
 
   return (
     <div>
-      <div>
-        <h1 className="section">Your 1-1 Section</h1>
+      <div className="onetoone-container">
+        <h1>Your 1-1 Section</h1>
         <div className="meeting-details">
-          <p className="coach">Coach: Kazeem Alat</p>
-          <p className="coach">
-            Email: <a href="mailto:email@example.com"> Kazeem.alatishe@yahoo.com</a>
-          </p>
-          <p className="coach">Your next meeting is on 23/11/2021</p>
-          <p className="coach">
-            Zoom link:{" "}
-            <a href="https://schoolofcode.zoom.us/j/85444009034">
-              {" "}
-              https://schoolofcode.zoom.us/j/85444009034
-            </a>
-          </p>
+          <img
+            className="avatar-onetoone"
+            src="avatar-kazeem.svg"
+            alt="avatar"
+          />
+          <div className="card-meeting-text">
+            <p>
+              Coach: <span className="coach-name">Kazeem Alat</span>
+            </p>
+            <p>
+              Email:{" "}
+              <a href="mailto:email@example.com"> Kazeem.alatishe@yahoo.com</a>
+            </p>
+            <p>
+              Your next meeting is on{" "}
+              <span className="meeting-date"> 23/11/2021</span>
+            </p>
+            <p>
+              Zoom link:{" "}
+              <a href="https://schoolofcode.zoom.us/j/85444009034">
+                {" "}
+                https://schoolofcode.zoom.us/j/85444009034
+              </a>
+            </p>
+          </div>
         </div>
       </div>
       <div className="section">
-        <p className="things section">Things to do before the next meeting</p>
+        <h3 className="things-to-do-title">
+          Things to do before the next meeting
+        </h3>
         <div className="list-container">
           <InputJournal handleInput={handleInput} inputValue={inputValue} />
           <SelectJournal handleSelect={handleSelect} />

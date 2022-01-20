@@ -1,7 +1,13 @@
 import pg from "pg";
-const pool = new pg.Pool({
-connectionString: process.env.DATABASE_URL,
+import { db } from "../config.js";
 
+const pool = new pg.Pool({
+  user: db.user,
+  host: db.host,
+  database: db.database,
+  password: db.password,
+  port: db.port,
+  ssl: { rejectUnauthorized: false }
 });
 
 export default async function query(text, params) {
