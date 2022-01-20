@@ -452,23 +452,23 @@ export const data = [
 
 export const dataTodo = [
   {
-    task: "London",
-    priority: "Astronomy"
+    task: "Learn UseReducer",
+    priority: "High"
   },
   {
-    task: "Kent",
-    priority: "Music"
+    task: "Watch a video on deployment in Heroku",
+    priority: "High"
   },
   {
-    task: "London",
-    priority: "Walking"
+    task: "Research on naming variables in javascript",
+    priority: "Low"
   },
   {
-    location: "Birmingham",
-    priority: "Gaming"
+    task: "Learn how to write variables in Css",
+    priority: "High"
   },
   {
-    task: "Someret",
-    priority: "Hiking"
+    task: "Learn github branching",
+    priority: "Low"
   }
 ];
