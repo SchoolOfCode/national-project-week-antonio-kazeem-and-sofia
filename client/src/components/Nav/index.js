@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [randomUser] = useState([
@@ -41,7 +42,10 @@ function Nav() {
             <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
             <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
           </svg>
-          <p>Home</p>
+          <Link to="/">
+            {" "}
+            <p>Home</p>
+          </Link>
         </li>
         <li className="active">
           <svg
@@ -60,7 +64,9 @@ function Nav() {
             <circle cx="12" cy="7" r="4" />
             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
           </svg>
-          <p>Bootcampers</p>
+          <Link to="/Bootcampers">
+            <p>Bootcampers</p>
+          </Link>
         </li>
         <li>
           <svg
@@ -79,7 +85,10 @@ function Nav() {
             <rect x="3" y="5" width="18" height="14" rx="2" />
             <polyline points="3 7 12 13 21 7" />
           </svg>
-          <p>Contact</p>
+          <Link to="/Contact">
+            {" "}
+            <p>Contact</p>
+          </Link>
         </li>
         <li>
           <svg
@@ -100,7 +109,9 @@ function Nav() {
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
           </svg>
-          <p>1to1</p>
+          <Link to="/1to1">
+            <p>1to1</p>
+          </Link>
         </li>
         <li>
           <svg
@@ -120,7 +131,10 @@ function Nav() {
             <line x1="13" y1="8" x2="15" y2="8" />
             <line x1="13" y1="12" x2="15" y2="12" />
           </svg>
-          <p> Journal</p>
+          <Link to="/Journal">
+            {" "}
+            <p> Journal</p>
+          </Link>
         </li>
         <li>
           <svg
@@ -141,7 +155,10 @@ function Nav() {
             <path d="M14 3v4a1 1 0 0 0 1 1h4" />
             <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
           </svg>
-          <p> Link & Doc</p>
+          <Link to="/Link&Doc">
+            {" "}
+            <p> Link & Doc</p>
+          </Link>
         </li>
       </ul>
     </aside>
