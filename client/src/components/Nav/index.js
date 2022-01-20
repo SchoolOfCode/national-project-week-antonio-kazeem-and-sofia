@@ -1,13 +1,26 @@
+import { useState } from "react";
 import "./Nav.css";
 
 function Nav() {
+  const [randomUser] = useState([
+    { id: 1, name: "Antonio Sevillano", avatar: "avatar-antonio.svg" },
+    { id: 2, name: "Sofia Sanchez", avatar: "avatar-sofia.svg" }
+  ]);
+
+  function getRandomUser() {
+    const random = Math.floor(Math.random() * 2) + 1;
+    return randomUser.filter((user) => user.id === random);
+  }
+
+  const user = getRandomUser();
+
   return (
     <aside className="sidebar">
       <div className="logo">Bootcamp Tracker</div>
       <div className="avatar-sidebar">
-        <img src="./avatar.svg" alt="" />
+        <img src={`${user[0].avatar}`} alt="" />
       </div>
-      <h2 className="sidebar-name">Antonio Sevillano</h2>
+      <h2 className="sidebar-name">{user[0].name}</h2>
       <p className="sidebar-subname">Bootcamper cohort 10</p>
       <ul className="menu">
         <li>

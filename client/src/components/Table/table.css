@@ -54,7 +54,6 @@
 
 .users-table-container {
   width: 94%;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -62,7 +61,8 @@
   box-shadow: 2px 30px 14px 14px hsl(0deg 0% 92% / 30%);
   border: #e7ebf0 1px solid;
   border-radius: 0.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.4rem;
+  margin-top: 1.5rem;
 }
 
 .m-right {
@@ -79,10 +79,17 @@
   font-size: 1.5rem;
 }
 
-.user-search-form {
+.user-search-form,
+.showing-users-number {
   width: 94%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.showing-users-number {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  color: #969696;
 }
 
 .search {
@@ -92,7 +99,8 @@
 .search-form-input-label {
   display: flex;
   align-items: center;
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 0 0 0;
+  width: 100%;
 }
 
 .search-form-input-label p {
@@ -100,17 +108,23 @@
 }
 
 .search-form-input-label input {
-  border: 1px solid #ccced1;
-  padding: 0.4rem;
+  border: 1px solid #e7e9ef;
+  background-color: #f9fbfc;
+  padding: 0.8rem;
   width: 100%;
+  color: #838f9b;
   outline-color: #cd9fdf;
   border-radius: 6px 0 0 6px;
+}
+
+.search-form-input-label input::placeholder {
+  font-size: 1rem;
 }
 
 .search-form-input-label button {
   background-color: #9b59b6;
   color: white;
   border: none;
-  padding: 0.45rem;
+  padding: 0.87rem;
   border-radius: 0 6px 6px 0;
 }

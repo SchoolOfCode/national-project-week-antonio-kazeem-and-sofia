@@ -7,8 +7,6 @@ import "./table.css";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
-  const [inputLocationValue, setInputLocationValue] = useState();
-  const [inputInterestValue, setInputInterestValue] = useState();
   const [filter, setFilter] = useState();
 
   useEffect(() => {
@@ -20,14 +18,13 @@ const Contacts = () => {
     getData();
   }, []);
 
-  function filterByLocation(event) {
-    event.preventDefault();
-    setFilter(userData.filter((data) => data.location === inputLocationValue));
-  }
-
-  function filterByInterest(event) {
-    event.preventDefault();
-    setFilter(userData.filter((data) => data.intrests === inputInterestValue));
+  function updateFilter(e) {
+    setFilter(
+      userData.filter(
+        (data) =>
+          data.location === e.target.value || data.intrests === e.target.value
+      )
+    );
   }
 
   return (
@@ -36,26 +33,14 @@ const Contacts = () => {
       <div className="user-search-form">
         <div className="search">
           <label className="search-form-input-label">
-            <p>Location</p>
             <input
-              onChange={(e) => {
-                setInputLocationValue(e.target.value);
-              }}
+              placeholder="Search for a bootcamper location or interest..."
+              onChange={(e) => updateFilter(e)}
             />
-            <button onClick={filterByLocation}>Search</button>
-          </label>
-
-          <label className="search-form-input-label">
-            <p> Interest</p>
-            <input
-              onChange={(e) => {
-                setInputInterestValue(e.target.value);
-              }}
-            />
-            <button onClick={filterByInterest}>Search</button>
           </label>
         </div>
       </div>
+
       <div className="users-table-container">
         <div>
           <Header />
@@ -84,6 +69,11 @@ const Contacts = () => {
               />
             ))}
       </div>
+      <p className="showing-users-number">
+        {!filter || filter.length === 0
+          ? `Showing ${userData.length} bootcampers`
+          : `Showing ${filter.length} bootcampers`}
+      </p>
     </>
   );
 };
