@@ -43,15 +43,9 @@ const Journal = () => {
     <div className="section">
       <h1>Bootcamp Task list</h1>
       <div className="list-container">
-<<<<<<< HEAD
-        <InputJournal handleInput={handleInput} inputValue={inputValue} />
-        <SelectJournal handleSelect={handleSelect} />
-        <ButtonJournal handleButton={handleButton} text=" Add To List" />
-=======
         <Input handleInput={handleInput} inputValue={inputValue} />
         <Select handleSelect={handleSelect} />
         <Button handleButton={handleButton} text=" Add To List" />
->>>>>>> 0bdd29b8da7e5b35db3e841f5d57d757d56bf6e7
       </div>
       <List listTodo={listTodo} setListToDo={setListToDo} />
     </div>
