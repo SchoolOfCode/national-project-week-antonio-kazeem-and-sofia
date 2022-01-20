@@ -6,4 +6,4 @@ export const db = {
   port: process.env.PGPORT
 };
 
-// export const URL = process.env.DATABASE_URL;
+// PRODUCTION export const URL = process.env.DATABASE_URL;

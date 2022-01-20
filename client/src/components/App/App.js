@@ -5,6 +5,8 @@ import Table from "../Table/index";
 import Home from "../Home/index.js";
 import OnetoOne from "../1to1";
 import linksDocs from "../LinksDocs/index.js";
+import Journal from "../Journal";
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +17,7 @@ function App() {
           <Route path="/Bootcampers" element={<Table />} />
           <Route path="/Contact" />
           <Route path="/1to1" element={<OnetoOne />} />
-          <Route path="/Journal" />
+          <Route path="/Journal" element={<Journal />} />
           <Route path="/Links&Docs" element={<linksDocs />} />
         </Routes>
       </div>
