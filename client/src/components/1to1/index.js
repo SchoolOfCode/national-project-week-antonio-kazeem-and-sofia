@@ -6,12 +6,12 @@ function OnetoOne() {
   const [input, setInput] = useState("");
   const [inputList, setInputList] = useState([]);
 
-  console.log(input);
+  // console.log(input);
 
   function handleButton() {
     setInputList([...inputList,{input}])
   }
-  console.log(inputList);
+  // console.log(inputList);
 
   return (
     <div>
@@ -34,23 +34,10 @@ function OnetoOne() {
         <button onClick={handleButton}>Add</button>
       </div>
       <div className="table">
-        {/* <table>
-          <tr>
-            <th>ggc</th>
-            <th>ggg</th>
-            <th>gg</th>
-          </tr>
-          <tr>
-            <td>ggg</td>
-            <td>ggf</td>
-            <td>gg</td>
-          </tr>
-          <tr>
-            <td>ggff</td>
-            <td>ggff</td>
-            <td>ggffff</td>
-          </tr>
-        </table> */}
+      {inputList.map((item)=>{
+        console.log(item.input)
+        return <p>{item.imput}</p>
+      })}
       </div>
     </div>
   );
