@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Table from "../Table/index";
 import Home from "../Home/index.js";
 import OnetoOne from "../1to1";
+import LinksDocs from "../LinksDocs/index.js";
 import Journal from "../Journal";
 import Register from "../Register";
 
@@ -18,8 +19,8 @@ function App() {
           <Route path="/Contact" />
           <Route path="/1to1" element={<OnetoOne />} />
           <Route path="/Journal" element={<Journal />} />
+          <Route path="/LinksDocs" element={<LinksDocs />} />
           <Route path="/Register" element={<Register />} />
-          <Route path="/Links&Docs" element={<linksDocs />} />
         </Routes>
       </div>
     </div>
