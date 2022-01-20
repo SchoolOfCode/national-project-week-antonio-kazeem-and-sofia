@@ -1,5 +1,5 @@
 import React from "react";
-import "../Listitem/Listitem.css";
+import "./Listitem.css";
 
 const Listitem = ({ task, id, setListToDo, listTodo, priority }) => {
   function deleteItem() {

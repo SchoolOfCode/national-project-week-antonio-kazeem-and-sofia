@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import InputJournal from "../InputJournal/";
-import SelectJournal from "../SelectJournal";
-import ButtonJournal from "../ButtonJournal";
-import List from "../List";
+import InputJournal from "../Input1to1/";
+import SelectJournal from "../Select1to1";
+import ButtonJournal from "../Button1to1";
+import List from "../List1to1";
 import "./1to1.css";
 
 const Journal = () => {
@@ -41,7 +41,10 @@ const Journal = () => {
       <div>
         <h1 className="section">Your 1-1 Section</h1>
         <div className="meeting-details">
-          <p className="coach">Coach: Abdullah</p>
+          <p className="coach">Coach: Kazeem Alat</p>
+          <p className="coach">
+            Email: <a href="mailto:email@example.com"> Kazeem.alatishe@yahoo.com</a>
+          </p>
           <p className="coach">Your next meeting is on 23/11/2021</p>
           <p className="coach">
             Zoom link:{" "}
