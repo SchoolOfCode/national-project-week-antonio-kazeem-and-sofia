@@ -5,11 +5,13 @@ import { NavLink } from "react-router-dom";
 function Nav() {
   const [randomUser] = useState([
     { id: 1, name: "Antonio Sevillano", avatar: "avatar-antonio.svg" },
-    { id: 2, name: "Sofia Sanchez", avatar: "avatar-sofia.svg" }
+    { id: 2, name: "Sofia Sanchez", avatar: "avatar-sofia.svg" },
+    { id: 3, name: "Corneliu Laur", avatar: "avatar-corneliu.svg" },
+    { id: 4, name: "Kazeem Alatishe", avatar: "avatar-kazeem.svg" }
   ]);
 
   function getRandomUser() {
-    const random = Math.floor(Math.random() * 2) + 1;
+    const random = Math.floor(Math.random() * 4) + 1;
     return randomUser.filter((user) => user.id === random);
   }
 
