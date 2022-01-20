@@ -7,7 +7,6 @@ import cors from "cors";
 import logger from "morgan";
 
 import usersRouter from "./routes/users.js";
-import loginRouter from "./routes/login.js";
 
 const app = express();
 
