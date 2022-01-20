@@ -11,7 +11,7 @@ const Contacts = () => {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(`https://caz1.herokuapp.com/users`);
+      const response = await fetch(`http://localhost:3001/users`);
       const data = await response.json();
       setuserData(data.payload);
     }
@@ -33,7 +33,7 @@ const Contacts = () => {
 
   return (
     <>
-      <h1 className="section-title">Bootcamper directory</h1>
+      <h1 className="section-title">Bootcampers directory</h1>
       <div className="user-search-form">
         <div className="search">
           <label className="search-form-input-label">

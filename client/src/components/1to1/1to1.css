@@ -1,4 +1,4 @@
-.section {
+.onetoone-container {
   width: 94%;
   margin-top: 1.5rem;
   margin-left: auto;
@@ -8,9 +8,8 @@
   margin-bottom: 0.5rem;
 }
 
-.section h1 {
+.onetoone-container h1 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .list-container {
@@ -20,22 +19,41 @@
 }
 
 .meeting-details {
-  width: 100%;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
   background-color: #f5f7f9;
 }
 
-.things {
-  margin-left: 0.5rem;
-  margin-bottom: 0.8rem;
+.avatar-onetoone {
+  width: 100px;
+  background-color: #3498db;
+  border-radius: 50px;
+  margin-right: 1rem;
 }
 
-.coach{
-  margin-bottom: 0.5rem;
-  margin-left: 2.5rem;
+.card-meeting-text {
+  line-height: 1.7rem;
+}
+
+.coach-name {
+  font-weight: 900;
+  color: #9b59b6;
+}
+
+.card-meeting-text a {
+  color: #3498db;
+}
+
+.meeting-date {
+  font-weight: 900;
+}
+
+.things-to-do-title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
