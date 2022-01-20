@@ -43,7 +43,13 @@ const Journal = () => {
         <div className="meeting-details">
           <p className="coach">Coach: Abdullah</p>
           <p className="coach">Your next meeting is on 23/11/2021</p>
-          <p className="coach">Zoom link:</p>
+          <p className="coach">
+            Zoom link:{" "}
+            <a href="https://schoolofcode.zoom.us/j/85444009034">
+              {" "}
+              https://schoolofcode.zoom.us/j/85444009034
+            </a>
+          </p>
         </div>
       </div>
       <div className="section">
