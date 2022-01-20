@@ -111,7 +111,7 @@
   border: 1px solid #e7e9ef;
   background-color: #f9fbfc;
   padding: 0.8rem;
-  width: 100%;
+  width: 97%;
   color: #838f9b;
   outline-color: #cd9fdf;
   border-radius: 6px 0 0 6px;
@@ -127,4 +127,9 @@
   border: none;
   padding: 0.87rem;
   border-radius: 0 6px 6px 0;
+}
+
+.link-register {
+  align-self: flex-end;
+  text-decoration: none;
 }

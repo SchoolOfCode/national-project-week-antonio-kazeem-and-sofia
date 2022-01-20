@@ -9,6 +9,7 @@ export const createUsers = async (body) => {
   );
   return response.rows;
 };
+
 export const getUsers = async () => {
   const response = await query("SELECT * FROM users");
   return response.rows;
