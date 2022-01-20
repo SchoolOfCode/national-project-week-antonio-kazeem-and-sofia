@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import Table from "../Table/index";
 import Home from "../Home/index.js";
 import OnetoOne from "../1to1";
-import linksDocs from "../LinksDocs/index.js";
 import Journal from "../Journal";
 import Register from "../Register";
 
