@@ -1,9 +1,13 @@
 import React from "react";
 import "./1to1.css";
+import { useState } from "react";
 
 function OnetoOne() {
-  // const date = Date.now().toString()
+  const [input, setInput] = useState("");
 
+
+  
+console.log(input);
   return (
     <div>
       <h1 id="header">Welcome to your 1to1 Section</h1>
@@ -16,7 +20,13 @@ function OnetoOne() {
 
       <div className="input-field">
         Things to work on before the next meeting
-        <input></input>
+        <input
+          className="input-thingstodo"
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        ></input>
+        <button>Add</button>
       </div>
       <div className="table">
         <table>
