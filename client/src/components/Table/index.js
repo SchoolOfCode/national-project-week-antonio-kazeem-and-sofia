@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
-import ButtonJournal from "../ButtonJournal/Button";
-// import { API_URL } from "../../../config.js";
+import Button from "../Button/Button";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
@@ -44,7 +43,7 @@ const Contacts = () => {
             />
           </label>
           <Link className="link-register" to="/register">
-            <ButtonJournal text=" Add bootcamper" handleButton={openModal} />
+            <Button text=" Add bootcamper" handleButton={openModal} />
           </Link>
         </div>
       </div>

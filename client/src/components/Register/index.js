@@ -1,3 +1,4 @@
+//Libraries
 import React from "react";
 import { useState } from "react";
 import Axios from "axios";
@@ -28,75 +29,65 @@ function Register() {
 
   return (
     <form>
-      <label>First Name</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setFname(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
+      <label>
+        First Name
+        <input
+          onChange={(e) => {
+            setFname(e.target.value);
+          }}
+        />
+      </label>
+      <label>
+        Last Name
+        <input
+          onChange={(e) => {
+            setLname(e.target.value);
+          }}
+        />
+      </label>
 
-      <label>Last Name</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setLname(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
+      <label>
+        Email
+        <input
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+      </label>
+      <label>
+        Github Username
+        <input
+          onChange={(e) => {
+            setGhub(e.target.value);
+          }}
+        />
+      </label>
+      <label>
+        Password
+        <input
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+      </label>
+      <label>
+        Location
+        <input
+          onChange={(e) => {
+            setLocation(e.target.value);
+          }}
+        />
+      </label>
 
-      <label>Email</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
-
-      <label>Github Username</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setGhub(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
-
-      <label>Password</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setPassword(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
-
-      <label>Location</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setLocation(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
-
-      <label>Interests</label>
-      <br></br>
-      <input
-        onChange={(e) => {
-          setInterest(e.target.value);
-        }}
-      />
-      <br></br>
-      <br></br>
+      <label>
+        Interests
+        <br></br>
+        <input
+          onChange={(e) => {
+            setInterest(e.target.value);
+          }}
+        />
+      </label>
 
       <button onClick={register}>Submit</button>
     </form>
