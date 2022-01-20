@@ -42,7 +42,7 @@ const Journal = () => {
       <div className="list-container">
         <InputJournal handleInput={handleInput} inputValue={inputValue} />
         <SelectJournal handleSelect={handleSelect} />
-        <ButtonJournal handleButton={handleButton} />
+        <ButtonJournal handleButton={handleButton} text=" Add To List" />
       </div>
       <List listTodo={listTodo} setListToDo={setListToDo} />
     </div>
