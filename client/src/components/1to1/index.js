@@ -4,10 +4,15 @@ import { useState } from "react";
 
 function OnetoOne() {
   const [input, setInput] = useState("");
+  const [inputList, setInputList] = useState([]);
 
+  console.log(input);
 
-  
-console.log(input);
+  function handleButton() {
+    setInputList([...inputList,input])
+  }
+  console.log(inputList);
+
   return (
     <div>
       <h1 id="header">Welcome to your 1to1 Section</h1>
@@ -26,10 +31,10 @@ console.log(input);
             setInput(e.target.value);
           }}
         ></input>
-        <button>Add</button>
+        <button onClick={handleButton}>Add</button>
       </div>
       <div className="table">
-        <table>
+        {/* <table>
           <tr>
             <th>ggc</th>
             <th>ggg</th>
@@ -45,7 +50,7 @@ console.log(input);
             <td>ggff</td>
             <td>ggffff</td>
           </tr>
-        </table>
+        </table> */}
       </div>
     </div>
   );
