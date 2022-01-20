@@ -17,11 +17,13 @@ const Contacts = () => {
     getData();
   }, []);
 
-  function updateFilter(e, type) {
-    type === "location" &&
-      setFilter(userData.filter((data) => data.location === e.target.value));
-    type === "interest" &&
-      setFilter(userData.filter((data) => data.intrests === e.target.value));
+  function updateFilter(e) {
+    setFilter(
+      userData.filter(
+        (data) =>
+          data.location === e.target.value || data.intrests === e.target.value
+      )
+    );
   }
 
   return (
@@ -31,16 +33,8 @@ const Contacts = () => {
         <div className="search">
           <label className="search-form-input-label">
             <input
-              placeholder="Search for a location..."
-              onChange={(e) => updateFilter(e, "location")}
-            />
-          </label>
-
-          <label className="search-form-input-label">
-            <p> Interest</p>
-            <input
-              placeholder="Search for a interest..."
-              onChange={(e) => updateFilter(e, "interest")}
+              placeholder="Search for a bootcamper location or interest..."
+              onChange={(e) => updateFilter(e)}
             />
           </label>
         </div>
