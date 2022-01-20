@@ -7,7 +7,7 @@ import cors from "cors";
 import logger from "morgan";
 
 import usersRouter from "./routes/users.js";
-import loginRouter from "./routes/login.js"
+import todoRouter from "./routes/todos.js"
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.json());
 // app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/users", usersRouter);
-app.use("/login", loginRouter);
+app.use("/todos", todoRouter);
 
 // app.use(function (req, res, next) {
 //   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
