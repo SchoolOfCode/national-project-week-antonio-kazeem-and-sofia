@@ -9,7 +9,7 @@ function Button({ handleButton, text }) {
         id="add-to-list"
         className="add-to-list-button"
       >
-        <img src="./add-icon.svg" alt="Add" />
+        <img src="add-icon.svg" alt="Add" />
         {text}
       </button>
     </>
