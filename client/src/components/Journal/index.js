@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 //Components
-import Input from "../Input";
+import Input from "../Input/index";
 import Select from "../Select/Index";
 import Button from "../Button/Button";
 import List from "../List/List";
