@@ -1,9 +1,12 @@
+//Libraries
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import InputJournal from "../InputJournal/Input";
-import SelectJournal from "../SelectJournal/Index";
-import ButtonJournal from "../ButtonJournal/Button";
+//Components
+import Input from "../Input";
+import Select from "../Select/Index";
+import Button from "../Button/Button";
 import List from "../List/List";
+//Styles
 import "./Journal.css";
 
 const Journal = () => {
@@ -40,9 +43,15 @@ const Journal = () => {
     <div className="section">
       <h1>Bootcamp Task list</h1>
       <div className="list-container">
+<<<<<<< HEAD
         <InputJournal handleInput={handleInput} inputValue={inputValue} />
         <SelectJournal handleSelect={handleSelect} />
         <ButtonJournal handleButton={handleButton} text=" Add To List" />
+=======
+        <Input handleInput={handleInput} inputValue={inputValue} />
+        <Select handleSelect={handleSelect} />
+        <Button handleButton={handleButton} text=" Add To List" />
+>>>>>>> 0bdd29b8da7e5b35db3e841f5d57d757d56bf6e7
       </div>
       <List listTodo={listTodo} setListToDo={setListToDo} />
     </div>

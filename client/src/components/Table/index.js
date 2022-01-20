@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
+<<<<<<< HEAD
 import ButtonJournal from "../ButtonJournal/Button";
 // import { API_URL } from "../../../config.js";
+=======
+import Button from "../Button/Button";
+>>>>>>> 0bdd29b8da7e5b35db3e841f5d57d757d56bf6e7
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
@@ -44,7 +48,11 @@ const Contacts = () => {
             />
           </label>
           <Link className="link-register" to="/register">
+<<<<<<< HEAD
             <ButtonJournal text=" Add bootcamper" handleButton={openModal} />
+=======
+            <Button text=" Add bootcamper" handleButton={openModal} />
+>>>>>>> 0bdd29b8da7e5b35db3e841f5d57d757d56bf6e7
           </Link>
         </div>
       </div>

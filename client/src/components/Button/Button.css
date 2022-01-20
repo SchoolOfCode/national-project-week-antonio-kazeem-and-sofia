@@ -1,29 +1,20 @@
-.button {
-  margin: 0 0.5rem 0 0.5rem;
-  border: none;
-  padding: 0.7rem;
-  color: white;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.button:active {
-  transform: scale(0.9);
-}
-
-.update {
-  background-color: #9b59b6;
-}
-
-.delete {
+.add-to-list-button {
+  align-self: end;
   background-color: #ff4163;
 }
 
-.update:hover {
-  background-color: #a86bc0;
-}
-
-.delete:hover {
-  background-color: #fd5f7c;
+.add-to-list-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 2.9rem;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  outline-color: #d4d4d4;
+  border-radius: 5px;
 }
