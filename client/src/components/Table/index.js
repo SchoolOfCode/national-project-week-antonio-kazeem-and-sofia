@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
-
-const API_URL = process.env.REACT_APP_API_
+// import { API_URL } from "../../../config.js";
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
@@ -14,7 +13,7 @@ const Contacts = () => {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(`${API_URL}/users`);
+      const response = await fetch(`https://caz1.herokuapp.com/users`);
       const data = await response.json();
       setuserData(data.payload);
     }
