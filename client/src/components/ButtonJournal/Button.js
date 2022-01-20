@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css";
 
-function Button({ handleButton }) {
+function Button({ handleButton, text }) {
   return (
     <>
       <button
@@ -26,7 +26,7 @@ function Button({ handleButton }) {
           <line x1="9" y1="12" x2="15" y2="12" />
           <line x1="12" y1="9" x2="12" y2="15" />
         </svg>
-        Add To List
+        {text}
       </button>
     </>
   );
