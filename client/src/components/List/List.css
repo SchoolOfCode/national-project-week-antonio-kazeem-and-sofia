@@ -1,0 +1,11 @@
+/* Priority label */
+.todo-task-label {
+  color: white;
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  margin-right: 0.6rem;
+  width: 65px;
+  display: inline-block;
+  text-align: center;
+}
