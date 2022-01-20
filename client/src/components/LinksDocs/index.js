@@ -1,29 +1,50 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { NavLink, Link } from "react-router-dom";
+import "./LinksDocs.css";
 
-const linksDocs = () => {
+const LinksDocs = () => {
   return (
-    <Router>
-      <Fragment>
-        <div>
-          <h2>Helpful Links</h2>
+    <Fragment>
+      <h2 className="large navbar card">Helpful Links</h2>
+      <section className="grid-3">
+        <section>
           <p className="my-1">link 1</p>
-          <p className="bg-dark p">
-            <strong>link 1</strong>
-          </p>
-          <Route
-            exact
-            path=""
-            component={() => {
-              window.location.href =
-                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter";
-              // return null;
-            }}
-          />
-        </div>
-      </Fragment>
-    </Router>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+            target="_blank"
+          >
+            <p className="bg-dark p">
+              <strong>.filter() JavaScript</strong>
+            </p>
+          </a>
+        </section>
+
+        <section>
+          <p className="my-1">link 2</p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+            target="_blank"
+          >
+            <p className="bg-dark p">
+              <strong>.filter() JavaScript</strong>
+            </p>
+          </a>
+        </section>
+
+        <section>
+          <p className="my-1">link 3</p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+            target="_blank"
+          >
+            <p className="bg-dark p">
+              <strong>.filter() JavaScript</strong>
+            </p>
+          </a>
+        </section>
+      </section>
+    </Fragment>
   );
 };
 
-export default linksDocs;
+export default LinksDocs;
