@@ -1,5 +1,6 @@
 import query from "../db/index.js";
 
+// this creates users in the database
 export const createUsers = async (body) => {
   const { fname, lname, email, githubUser, password, location, intrests } =
     body;
@@ -10,11 +11,13 @@ export const createUsers = async (body) => {
   return response.rows;
 };
 
+// this gets all users in the database
 export const getUsers = async () => {
   const response = await query("SELECT * FROM users");
   return response.rows;
 };
 
+// this gets login details from the database
 export const getLogin = async (body) => {
   console.log(body);
   const { email, password } = body;
@@ -26,6 +29,7 @@ export const getLogin = async (body) => {
   return response.rows;
 };
 
+// this gets users from the database by query
 export async function getUsersByQuery(location, intrest) {
   if (location !== undefined) {
     const res = await query(

@@ -1,5 +1,8 @@
+// packages imported
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+
+
 import InputJournal from "../Input1to1/";
 import SelectJournal from "../Select1to1";
 import ButtonJournal from "../Button1to1";
@@ -7,14 +10,17 @@ import List from "../List1to1";
 import "./1to1.css";
 
 const Journal = () => {
+  // useState hook was used to set the states for the listtodo, inputvalue and selectvalue
   const [listTodo, setListToDo] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [selectValue, setSelectValue] = useState("Low");
 
+  // this function sets the input into the inputfield
   function handleInput(e) {
     setInputValue(e.target.value);
   }
 
+  // this function rerenders the todolist on click of the button
   function handleButton() {
     setListToDo([
       ...listTodo,
@@ -28,10 +34,12 @@ const Journal = () => {
     reset();
   }
 
+  // this resets the input field
   function reset() {
     setInputValue("");
   }
 
+  // this selects the value in the priority field
   function handleSelect(e) {
     setSelectValue(e.target.value);
   }

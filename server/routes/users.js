@@ -1,20 +1,18 @@
 import express from "express";
-import { createUsers, getUsers, getUsersByQuery } from "../models/users.js";
+
+// functions where imported to query the database
+import { createUsers, getUsers } from "../models/users.js";
+
 const router = express.Router();
 
-/* GET users listing. */
-router.get("/", async function(req, res) {
-  console.log("query",req.query);
-  
-  const {intrest, location} = req.query
-  if(location!==undefined||intrest!==undefined){
-    const userbyQuery = await getUsersByQuery(location,intrest)
-     res.json({ success: true, message: "Its working", payload: userbyQuery });
-  }else{
+// This handles get requests to users.
+router.get("/", async function (req, res) {
+  console.log("query", req.query);
   const getUser = await getUsers();
   res.json({ success: true, message: "Its working", payload: getUser });
-}});
+});
 
+// This handles post request to users
 router.post("/", async (req, res) => {
   const createUser = await createUsers(req.body);
   res.json({

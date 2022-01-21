@@ -10,14 +10,17 @@ import List from "../List/List";
 import "./Journal.css";
 
 const Journal = () => {
+  // a useState to set all the states
   const [listTodo, setListToDo] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [selectValue, setSelectValue] = useState("Low");
 
+  // this set the value of the input field
   function handleInput(e) {
     setInputValue(e.target.value);
   }
 
+  // on buttonclick it rerenders the list 
   function handleButton() {
     setListToDo([
       ...listTodo,
@@ -31,10 +34,12 @@ const Journal = () => {
     reset();
   }
 
+// resets the input field.
   function reset() {
     setInputValue("");
   }
 
+  // sets the value inputed in the priority field.
   function handleSelect(e) {
     setSelectValue(e.target.value);
   }

@@ -1,6 +1,8 @@
+import { Route, Routes } from "react-router-dom";
+
+
 import "./App.css";
 import Nav from "../Nav/index";
-import { Route, Routes } from "react-router-dom";
 import Table from "../Table/index";
 import Home from "../Home/index.js";
 import OnetoOne from "../1to1";

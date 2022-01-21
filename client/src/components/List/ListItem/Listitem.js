@@ -2,6 +2,7 @@ import React from 'react';
 import '../ListItem/Listitem.css';
 
 const Listitem = ({ task, id, setListToDo, listTodo, priority }) => {
+  // this deletes a particular task on button click
   function deleteItem() {
     // console.log('ok');
     const filteredList = listTodo.filter((item) => {

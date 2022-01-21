@@ -1,6 +1,7 @@
 import { data } from "../../data/data.js";
 import query from "../index.js";
 
+// populates the user table
 const createUser = async () => {
   data.forEach(async (item) => {
     const fname = item.fname;

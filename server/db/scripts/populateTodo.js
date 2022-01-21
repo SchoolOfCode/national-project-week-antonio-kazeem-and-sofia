@@ -2,6 +2,7 @@ import { dataTodo } from "../../data/data.js";
 import query from "../index.js";
 console.log(dataTodo);
 
+// populates the todo table
 const createTodo = async () => {
   dataTodo.forEach(async (item) => {
     const task = item.task;
