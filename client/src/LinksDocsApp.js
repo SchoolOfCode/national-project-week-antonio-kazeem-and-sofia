@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Resources from "./components/Resources/Resources";
-import "./components/LinksDocs/LinksDocs.css";
+import Nav from "./components/Nav";
 
 class LinksDocsApp extends Component {
   foo = () => "Bars";
 
   render() {
     return (
-        <div className="container">
-          <Resources />
-        </div>
+      <div className="container">
+        <Resources />
+      </div>
     );
   }
 }

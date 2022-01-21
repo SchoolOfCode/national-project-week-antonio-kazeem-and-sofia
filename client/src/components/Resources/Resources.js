@@ -68,8 +68,9 @@ class Resources extends Component {
 
 const resourceStyle = {
   display: "grid",
-  gridTemplateColumns: "repeat(4, 1fr)",
-  gridGap: "1rem"
+  gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr)",
+  gridGap: "1rem",
+  alignItems: "center"
 };
 
 export default Resources;
