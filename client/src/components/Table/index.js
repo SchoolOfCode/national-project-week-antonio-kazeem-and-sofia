@@ -5,13 +5,15 @@ import Row from "./Row";
 import "./table.css";
 import Button from "../Button/Button";
 
+const API_URl = "https://caz1.herokuapp.com"
+
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
   const [filter, setFilter] = useState();
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(`http://localhost:3001/users`);
+      const response = await fetch(`${API_URl}/users`);
       const data = await response.json();
       setuserData(data.payload);
     }
