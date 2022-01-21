@@ -1,13 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import LinksDocsApp from "../../LinksDocsApp.js";
 import "./LinksDocs.css";
+import { Fragment } from "react";
 
 const LinksDocs = () => {
-  ReactDOM.render(
-    <React.StrictMode>
+  render(
+    <Fragment>
       <LinksDocsApp />
-    </React.StrictMode>,
+    </Fragment>,
     document.getElementById("root")
   );
 };

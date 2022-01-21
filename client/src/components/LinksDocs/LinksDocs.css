@@ -24,6 +24,15 @@ body {
 /* Text Styles*/
 .text-center {
   text-align: center;
+  align-items: center;
+}
+
+.text-colour {
+  color: #888;
+}
+
+.text-colour-2 {
+  color: #444;
 }
 
 /* Center All */
@@ -72,6 +81,14 @@ body {
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
   background-color: #f5f7f9;
+  height: 350px;
+}
+
+.card-2 {
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+  background-color: #f5f7f9;
+  height: 200px;
 }
 
 /* Text */

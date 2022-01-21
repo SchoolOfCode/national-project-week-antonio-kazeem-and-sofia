@@ -38,11 +38,11 @@ class Resources extends Component {
       },
       {
         id: "5",
-        title: "Array.prototype.indexOf()",
+        title: "Array.prototype.flat()",
         description:
-          "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
+          "The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
         html_url:
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"
       },
       {
         id: "6",
@@ -51,6 +51,54 @@ class Resources extends Component {
           "The push() method adds one or more elements to the end of an array and returns the new length of the array.",
         html_url:
           "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+      },
+      {
+        id: "7",
+        title: "Array.prototype.every()",
+        description:
+          "The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+      },
+      {
+        id: "8",
+        title: "Array.prototype.some()",
+        description:
+          "The some() method tests whether at least one element in the array passes the test implemented by the provided function.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"
+      },
+      {
+        id: "9",
+        title: "Array.prototype.pop()",
+        description:
+          "The pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"
+      },
+      {
+        id: "10",
+        title: "Array.prototype.join()",
+        description:
+          "The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+      },
+      {
+        id: "11",
+        title: "Array.prototype.shift()",
+        description:
+          "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+      },
+      {
+        id: "12",
+        title: "Array.prototype.sort()",
+        description:
+          "The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending.",
+        html_url:
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
       }
     ]
   };
