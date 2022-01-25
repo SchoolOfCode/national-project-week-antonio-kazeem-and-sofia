@@ -27,7 +27,7 @@ function Nav() {
       <p className="sidebar-subname">Bootcamper cohort 10</p>
       <ul className="menu">
         <li>
-          <NavLink to="/">
+          <NavLink to="/Home">
             <img src="./home.svg" alt="Home" />
             <p>Home</p>
           </NavLink>
