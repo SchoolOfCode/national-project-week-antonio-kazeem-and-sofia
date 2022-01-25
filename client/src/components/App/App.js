@@ -9,6 +9,7 @@ import OnetoOne from "../1to1";
 import LinksDocs from "../LinksDocs/index.js";
 import Journal from "../Journal";
 import Register from "../Register";
+import Welcome from "../Welcome"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Nav />
       <div className="main">
         <Routes>
+        <Route path="/" element={<Welcome/>}/>
           <Route path="/" element={<Home />} />
           <Route path="/Bootcampers" element={<Table />} />
           <Route path="/Contact" />
