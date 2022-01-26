@@ -8,6 +8,7 @@ import Button from "../Button/Button";
 import List from "../List/List";
 //Styles
 import "./Journal.css";
+import Nav from "../Nav";
 
 const Journal = () => {
   // a useState to set all the states
@@ -45,15 +46,20 @@ const Journal = () => {
   }
 
   return (
-    <div className="section">
-      <h1>Bootcamp Task list</h1>
-      <div className="list-container">
-        <Input handleInput={handleInput} inputValue={inputValue} />
-        <Select handleSelect={handleSelect} />
-        <Button handleButton={handleButton} text=" Add To List" />
+    <>
+      <div>
+        <Nav />
       </div>
-      <List listTodo={listTodo} setListToDo={setListToDo} />
-    </div>
+      <div className="others-1to1">
+        <h1 className="bootcamp-header">Bootcamp Task list</h1>
+        <div className="list-container">
+          <Input handleInput={handleInput} inputValue={inputValue} />
+          <Select handleSelect={handleSelect} />
+          <Button handleButton={handleButton} text=" Add To List" />
+        </div>
+        <List listTodo={listTodo} setListToDo={setListToDo} />
+      </div>
+    </>
   );
 };
 

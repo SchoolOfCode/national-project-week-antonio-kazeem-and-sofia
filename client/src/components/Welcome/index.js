@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./welcome.css";
+
+import LoginButton from "../LoginButton";
 
 function Welcome() {
   return (
-    <div>
-      <div className="login-container">Login Screen</div>
-      <Link to="/Login">
-        <button>Login</button>
-      </Link>
-      <Link to="/Register">
-        <button>Register</button>
-      </Link>
+    <div className="welcome">
+    <h1 className="huddle-header">Welcome to your Bootcamper Huddle</h1>
+      <div>Login Screen</div>
+      <div>
+        <LoginButton />
+      </div>
     </div>
   );
 }

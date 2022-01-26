@@ -4,8 +4,9 @@ import Header from "./Header";
 import Row from "./Row";
 import "./table.css";
 import Button from "../Button/Button";
+import Nav from "../Nav";
 
-const API_URl = "https://caz1.herokuapp.com"
+const API_URl = process.env.REACT_APP_BACKEND_URL;
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
@@ -35,54 +36,59 @@ const Contacts = () => {
 
   return (
     <>
-      <h1 className="section-title">Bootcampers directory</h1>
-      <div className="user-search-form">
-        <div className="search">
-          <label className="search-form-input-label">
-            <input
-              placeholder="Search for a bootcamper location or interest..."
-              onChange={(e) => updateFilter(e)}
-            />
-          </label>
-          <Link className="link-register" to="/register">
-            <Button text=" Add bootcamper" handleButton={openModal} />
-          </Link>
-        </div>
+      <div className="nav">
+        <Nav />
       </div>
+      <div className="others">
+        <h1 className="section-title">Bootcampers directory</h1>
+        <div className="user-search-form">
+          <div className="search">
+            <label className="search-form-input-label">
+              <input
+                placeholder="Search for a bootcamper location or interest..."
+                onChange={(e) => updateFilter(e)}
+              />
+            </label>
+            <Link className="link-register" to="/register">
+              <Button text=" Add bootcamper" handleButton={openModal} />
+            </Link>
+          </div>
+        </div>
 
-      <div className="users-table-container">
-        <div>
-          <Header />
+        <div className="users-table-container">
+          <div>
+            <Header />
+          </div>
+          {!filter || filter.length === 0
+            ? userData.map((user) => (
+                <Row
+                  key={user.userid}
+                  name={user.f_name}
+                  lastname={user.l_name}
+                  email={user.email}
+                  location={user.location}
+                  githubuser={user.githubuser}
+                  interest={user.intrests}
+                />
+              ))
+            : filter.map((user) => (
+                <Row
+                  key={user.userid}
+                  name={user.f_name}
+                  lastname={user.l_name}
+                  email={user.email}
+                  location={user.location}
+                  githubuser={user.githubuser}
+                  interest={user.intrests}
+                />
+              ))}
         </div>
-        {!filter || filter.length === 0
-          ? userData.map((user) => (
-              <Row
-                key={user.userid}
-                name={user.f_name}
-                lastname={user.l_name}
-                email={user.email}
-                location={user.location}
-                githubuser={user.githubuser}
-                interest={user.intrests}
-              />
-            ))
-          : filter.map((user) => (
-              <Row
-                key={user.userid}
-                name={user.f_name}
-                lastname={user.l_name}
-                email={user.email}
-                location={user.location}
-                githubuser={user.githubuser}
-                interest={user.intrests}
-              />
-            ))}
+        <p className="showing-users-number">
+          {!filter || filter.length === 0
+            ? `Showing ${userData.length} bootcampers`
+            : `Showing ${filter.length} bootcampers`}
+        </p>
       </div>
-      <p className="showing-users-number">
-        {!filter || filter.length === 0
-          ? `Showing ${userData.length} bootcampers`
-          : `Showing ${filter.length} bootcampers`}
-      </p>
     </>
   );
 };

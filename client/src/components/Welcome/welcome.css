@@ -1,0 +1,10 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.huddle-header{
+ text-align: center;
+
+}

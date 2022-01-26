@@ -1,24 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 
-
 import "./App.css";
-import Nav from "../Nav/index";
 import Table from "../Table/index";
 import Home from "../Home/index.js";
 import OnetoOne from "../1to1";
 import LinksDocs from "../LinksDocs/index.js";
 import Journal from "../Journal";
 import Register from "../Register";
-import Welcome from "../Welcome"
+import Welcome from "../Welcome";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <div className="main">
         <Routes>
-        <Route path="/" element={<Welcome/>}/>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Bootcampers" element={<Table />} />
           <Route path="/Contact" />
           <Route path="/1to1" element={<OnetoOne />} />
@@ -26,7 +22,6 @@ function App() {
           <Route path="/LinksDocs" element={<LinksDocs />} />
           <Route path="/Register" element={<Register />} />
         </Routes>
-      </div>
     </div>
   );
 }

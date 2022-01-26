@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import LogoutButton from "../LogOutButton";
 
 function Nav() {
   const [randomUser] = useState([
@@ -56,6 +57,9 @@ function Nav() {
             <p> Links & Docs</p>
           </NavLink>
         </li>
+        <l>
+          <LogoutButton/>
+        </l>
       </ul>
     </aside>
   );

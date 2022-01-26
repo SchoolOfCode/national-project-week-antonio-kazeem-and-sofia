@@ -133,3 +133,10 @@
   align-self: flex-end;
   text-decoration: none;
 }
+
+.others{
+  margin-left: 20rem;
+  width: 100rem;
+  margin-right: 3rem;
+}
+
