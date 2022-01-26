@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 220px;
+  width: 270px;
+  height: 100vh;
 }
 
 .avatar-sidebar {
@@ -62,3 +63,4 @@
   background-color: #fbefff;
   font-weight: 800;
 }
+

@@ -18,3 +18,14 @@
   width: 100%;
   justify-content: space-between;
 }
+
+.others-1to1{
+  margin-left: 20rem;
+  width: 100rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
+
+.bootcamp-header{
+  margin-bottom: 1rem;
+}
