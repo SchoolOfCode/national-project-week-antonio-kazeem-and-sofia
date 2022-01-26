@@ -5,7 +5,7 @@ import Row from "./Row";
 import "./table.css";
 import Button from "../Button/Button";
 
-const API_URl = "https://caz1.herokuapp.com"
+const API_URl = process.env.REACT_APP_BACKEND_URL;
 
 const Contacts = () => {
   const [userData, setuserData] = useState([]);
